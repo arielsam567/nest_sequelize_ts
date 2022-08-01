@@ -13,8 +13,15 @@ export class LivrosService {
     return this.livroModel.findAll();
   }
 
+  async buscaPorLivros(nome: string): Promise<Livro[]> {
+    return this.livroModel.findAll({
+      where: {
+        nome: nome,
+      },
+    });
+  }
+
   async obterUm(id: number): Promise<Livro> {
-    console.log('PIZAA  ', await this.livroModel.findByPk(id));
     return this.livroModel.findByPk(id);
   }
 

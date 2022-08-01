@@ -22,6 +22,11 @@ export class LivrosController {
     return this.livrosService.obterTodos();
   }
 
+  @Get(':nome')
+  async buscaPorNome(@Param() params): Promise<Livro[]> {
+    return this.livrosService.buscaPorLivros(params.nome);
+  }
+
   @Get(':id')
   async obterUm(@Param() params): Promise<Livro> {
     const livro = await this.livrosService.obterUm(params.id);

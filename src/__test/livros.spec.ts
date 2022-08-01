@@ -10,10 +10,10 @@ describe('Livros test', () => {
   let respondeGETbyID: Response;
   let bodyGetById;
 
+  let responseUPDATE: Response;
+
   let respondeDELETE: Response;
   let userIdToDelet;
-
-  let responseUPDATE: Response;
 
   beforeEach(async () => {
 
